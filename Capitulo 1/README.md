@@ -1,5 +1,5 @@
 
-##Que es Version Control
+## Que es Version Control
 
 Que es version control y por que deberia de interesarles ?. Version Cotrol es un sistema que registra cambios en un archivo o un conjunto archivos atravez del timepo.
 
@@ -98,7 +98,7 @@ $ pkg_add git
 __Nota__: Por default la opcion de auto-completar no esta habilitada. Pera resolver este problema puede usar lo pasos que se encuentran en el siguiente link : [http:blog.jacovarrubias.com](http://blog.jacovarrubias.com/post/99660637170/how-to-add-auto-completion-to-git)
 
 
-###Instalacion en OS X
+### Instalacion en OS X
 
 Para usuario de la pueden hacer su installacion desde el Codigo Fuente o pueden descargalo desde el siguiente URL [http://git-scm.com/download/mac](http://git-scm.com/download/mac).
 
@@ -110,12 +110,12 @@ $sudo port install git-core
 
 __Nota__: Por default la opcion de auto-completar no esta habilitada. Pera resolver este problema puede usar lo pasos que se encuentran en el siguiente link : [http:blog.jacovarrubias.com](http://blog.jacovarrubias.com/post/99660637170/how-to-add-auto-completion-to-git)
 
-###Instalacion en Windows
+### Instalacion en Windows
 
 Para usuarios de Windows pueden descargar en installador desde la pagina de [http://git-scm.com/download/win](http://git-scm.com/download/win).
 
 
-###Probar git
+### Probar git
 
 Para asegurarse que git a sido installado appropiadamente. Abran un ventana de linea commando (Terminal para Unix o para Window git-shell). Escriban la siguiente sentencia
 
@@ -149,7 +149,7 @@ $ git config --global [opcion]
 
 * Archivo de configuracion a nivel repositorio (nombre_proyecto/.git/config), este archivo se crea para cada repositorio.
 
-###Configurar tu identidad
+### Configurar tu identidad
 
 Lo primero que se tiene que configurar es tu identidad en Git (nombre y correo electronico). Esto es importante por que en cada Git Commit utiliza esta informacion, y es inmutable cuando compartes los Commits:
 
@@ -158,7 +158,7 @@ $ git config --global user.name "Nombre Apellido"
 $ git config --global user.email "mycorreo@domain.com"
 ```
 
-###Configurar el Editor para Git
+### Configurar el Editor para Git
 
 Git necesita tener configurado un editor de Texto por default en caso de que Git requiera que escribas un mensaje. Para configurar puedes usar una de las opciones que mostramos a continuacion:
 
@@ -171,7 +171,7 @@ $ git config --global core.editor "vim"
 $ git config --global core.editor "emacs"
 ```
 
-###Configurar Git para que use Colores
+### Configurar Git para que use Colores
 
 Si no te gusta ver informacion monocromatica en tu terminal puedes configurar Git para que te muestre su informacion en colores. Esto es realmente util para identificar rapidamente en que estado se encuentra nuestros archivos.
 
@@ -179,7 +179,7 @@ Si no te gusta ver informacion monocromatica en tu terminal puedes configurar Gi
 $ git config --global color.ui true
 ```
 
-###Revisar las variables
+### Revisar las variables
 
 Para ver tu configuracion puede usar esta instruccion :
 ```
@@ -190,7 +190,7 @@ o puedes verlo a nivel variable (__git config {key}__):
 $ git config user.name
 ```
 
-##Manual de Ayuda
+## Manual de Ayuda
 
 Para obtener ayuda en como usar Git, siempre esta disponible la instruccion __git help < verb >__ para ver documentacion.
 

@@ -1,8 +1,8 @@
-#Inicializar un Repositorio Git
+# Inicializar un Repositorio Git
 
 Para poder utilizar todos los beneficios de Git primeramente tenemos que inicializar un repositorio. Tenemos dos opciones para hacerlo, numero uno es inicializar el repositorio desde un projecto existente o directorio local he importalo a Git y numero dos es mediante una clonacion de un proyecto existente en un servidor remoto.
 
-###Inicializar un Repositorio desde un Directorio Existente
+### Inicializar un Repositorio desde un Directorio Existente
 
 Si tienes un projecto ya avanzado o vas a iniciar uno puedes initializar Git. Esto son los pasos:
 
@@ -36,7 +36,7 @@ Esta instruccion hace lo mismo que la anterio, pero el nombre del folder se a se
 
 __Nota__ : Git puede utilizar varios tipo de protocolos de transmision. En los ejemplos utilizamos el protocolo __https__ pero tambien puede utilizar __git://, http:// o usuario@servidor:/path.git__ el cual usa SSH.
 
-#Guardar los Cambios en el Repositorio Git
+# Guardar los Cambios en el Repositorio Git
 
 El proceso y la parte mas importante que deben tener siempre presente en Git es que los archivos de tu proyecto pueden estar en dos estados __tracked (monitoreados)__ y __untracked (no-monitoreados)__ .
 
@@ -48,7 +48,7 @@ Cada vez que se modifique un archivo monitoreado por Git. El sistema lo marca co
 
 <img src="git-lifecycle.png" width="600">
 
-###Revisar el estatus de tus archivos 
+### Revisar el estatus de tus archivos 
 
 La herramienta que te va ayudar a identificar en que estatus se encuentran los archivos (Untrack, Track, Modified, Staged) es la funcion __$ git status__. Despues de haber hecho nuestro primer commit o clonado un repositorio, nos va a mostrar el siguiente mensaje : 
 
@@ -103,7 +103,7 @@ Nos podemos dar cuenta que el archivo esta __Staged__ por que esta en la seccion
 __Nota__: Si realizamos un Commit en este momento, la version del archivo al momento de haber ejecutado el __$ git add__ es la version que se va a registrar.
 
 
-###Mandar a Staged archivos Modificados
+### Mandar a Staged archivos Modificados
 
 Ahora que pasa cuando modificamos un archivo que Git si esta monitoreando. Por ejemplo, digamos que tenemos un archivo llamado index.js y realizamos una actualizacion al codigo. Ahora executemos un __$ git status__.
 
@@ -137,7 +137,7 @@ Changes to be committed:
 	modified:   index.js
 ```
 
-###Ignorar Archivos 
+### Ignorar Archivos 
 
 Es muy comun que cuando ejecutamos nuestro codigo genere archivos que no queremos agregar a nuestro repositorio. Por ejemplo los arhicov *.log , archivos de output, archivos temporales, etc. Git nos proporciona una forma de evitar la molestia de ver este tipo de archivos en estado como no __Archivo No-Monitoreado (Untracked)__. Para esto existe el archivo __.gitignore__.
 
@@ -161,7 +161,7 @@ doc/*.txt
 doc/**/*.txt
 ```
 
-###Visualizar tu cambios entre Staged y Non-Staged
+### Visualizar tu cambios entre Staged y Non-Staged
 
 La pregunta mas comun que un se hace es como puede ver que cambios voy a afectar entre los archivos. Es decir como vas a ver el verdadero impacto. Para esto se necesita una herramienta de comparacion y para eso Git integra la instruccion __ $ git diff__.
 
@@ -214,7 +214,7 @@ index e69de29..a19abfe 100644
 @@ -0,0 +1 @@
 +Hola
 ```
-###Vamos a hacer Commits !!
+### Vamos a hacer Commits !!
 
 Ahora que ya tenemos archivos localizados en el zona Staged, podemos proceder a guardar nuestros cambios en Git con un commit.Es importante mencionar que todos los archivos modificados o actualizados que no hallan pasado por un __$ git add__ no va a ser registrado en Git. Siempre es recomendable revisar el estado de tus archivo con un __$ git status__ para estar seguro que es lo que vamos a guardar. La forma mas ejecutar un Commit es de la siguiente manera : 
 
@@ -434,8 +434,26 @@ Para crear un tag :
 $ git tag -a v1.0 -m "nombre de version"
 ```
 
+# Alias en Git
 
+Hay otro pequeño consejo que puede hacer que tu experiencia con Git sea más simple, sencilla y familiar: los alias.
 
+Git no deduce automáticamente tu comando si lo tecleas parcialmente. Si no quieres teclear el nombre completo de cada comando de Git, puedes establecer fácilmente un alias para cada comando mediante git config. Aquí tienes algunos ejemplos que te pueden interesar:
+
+``` git
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+```
+
+Esto significa que, por ejemplo, en lugar de teclear git commit, solo necesitas teclear git ci. A medida que uses Git, probablemente también utilizarás otros comandos con frecuencia.
+
+El formato para la creacion de un nuevo alias es el siguiente:
+
+``` bash
+git config --global alias.nombreDelAlias "Comandos de git a ejecutar"
+```
 
 
 
